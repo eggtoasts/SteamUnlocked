@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
 
   //api endpoint
   const API_KEY = process.env.STEAM_API_KEY;
-  const endpointUrl = `https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${API_KEY}&steamid=${id}&format=json`;
+  const endpointUrl = `https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=${id}&format=json`;
 
   try {
     const response = await fetch(endpointUrl);
