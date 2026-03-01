@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
 
   //api endpoint
   const API_KEY = process.env.STEAM_API_KEY;
-  const endpointUrl = `https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=${id}&format=json`;
+  const endpointUrl = `https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=${API_KEY}&appid=${id}`;
 
   try {
     const response = await fetch(endpointUrl);
