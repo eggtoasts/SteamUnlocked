@@ -99,6 +99,6 @@ export async function GET(request: NextRequest) {
 
     return Response.json({ gameData });
   } catch {
-    return Response.json({ error: "Error, could not fetch." });
+    return Response.json({ error: Response.error });
   }
 }
